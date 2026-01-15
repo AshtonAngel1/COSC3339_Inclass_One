@@ -12,6 +12,7 @@ branches to simulate merge conflicts.
 """
 
 import math
+import random
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
@@ -61,13 +62,14 @@ def calculate_shipping_cost(weight, destination):
 # This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
     new_scores = []
-    for s in scores:
-        curved = s * 1.05
+    i = 0
+    while i < len(scores):
+        curved = scores[i] + random.randint(1, 10)
         if curved > 100:
             curved = 100
         new_scores.append(curved)
+        i += 1
     return new_scores
-
 
 # For scenario three change the name of this method.
 # For scenario five fix the typos
