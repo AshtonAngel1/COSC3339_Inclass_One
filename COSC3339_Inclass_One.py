@@ -53,7 +53,9 @@ def calculate_shipping_cost(weight, destination):
         print(f"Error: Unknown destination {destination}")
         return None
 
-    return cost
+    # Round final cost to 2 decimals and print
+    print(f"Final shipping cost: {cost}")
+    return round(cost, 2)
 
 
 # This method uses funky logic. Rewrite it using different loop structures
