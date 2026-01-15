@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-# YOUR NAME HERE
-# YOUR SECTION HERE
-# DATE OF EDITING HERE
-=======
 # Ashton Mares
 # COSC3339
 # 1/15/2026
->>>>>>> 3727d9c2419a95d48405314f5b40ce6517328f2a
+
 
 """
 ASSIGNMENT: INTRODUCTION TO MERGING
@@ -20,11 +15,7 @@ import math
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
-<<<<<<< HEAD
-    result = side_a + side_b  
-=======
     result = math.sqrt((side_a ** 2) + (side_b ** 2))
->>>>>>> 3727d9c2419a95d48405314f5b40ce6517328f2a
     return result
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
@@ -127,8 +118,4 @@ def main():
     
     print("\n--- END OF TESTS ---")
 
-<<<<<<< HEAD
 main()
-=======
-main()
->>>>>>> 3727d9c2419a95d48405314f5b40ce6517328f2a
