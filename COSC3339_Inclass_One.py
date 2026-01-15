@@ -73,6 +73,10 @@ def _validate_input(text_value):
         valid_input = False
     return valid_input
 
+def process_user_data(user_text):
+    # Call the helper function to validate input
+    return _validate_input(user_text)
+
 
 def main():
     print("--- STARTING TESTS ---")
@@ -107,12 +111,12 @@ def main():
     # In 'Change Six', you will uncomment the lines below and write 
     # a new function called 'process_user_data' that uses the helper.
     
-    # print("--- SCENARIO 3 TEST ---")
-    # user_input = "This is some fake user data"
-    # if process_user_data(user_input):
-    #     print("Data processed successfully")
-    # else:
-    #     print("Data invalid")
+     print("--- SCENARIO 3 TEST ---")
+     user_input = "This is some fake user data"
+     if process_user_data(user_input):
+         print("Data processed successfully")
+     else:
+         print("Data invalid")
     
     print("\n--- END OF TESTS ---")
 
