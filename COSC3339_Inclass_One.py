@@ -11,19 +11,16 @@ branches to simulate merge conflicts.
 """
 
 import math
-import random
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def CALCULATE_HYPOTENUSE(SIDE_A, SIDE_B):
-    RESULT = math.sqrt((SIDE_A ** 2) + (SIDE_B ** 2))
-    return RESULT
+    return math.hypot(SIDE_A, SIDE_B)
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def COUNT_WORDS(SENTENCE):
-    if len(SENTENCE) == 0:
+    if not SENTENCE:
         return 0
-    WORDS = SENTENCE.split()  
-    return len(WORDS)
+    return len(SENTENCE.split())
 
 
 # This method is long to allow for non-overlapping edits.
@@ -60,26 +57,12 @@ def CALCULATE_SHIPPING_COST(WEIGHT, DESTINATION):
 
 # This method uses funky logic. Rewrite it using different loop structures
 def CURVE_SCORES(SCORES):
-    NEW_SCORES = []
-    for S in SCORES:
-        CURVED = S * 1.05
-        if CURVED > 100:
-            CURVED = 100
-        NEW_SCORES.append(CURVED)
-    return NEW_SCORES
+    return [min(SCORE * 1.05, 100) for SCORE in SCORES]
 
 # For scenario three change the name of this method.
 # For scenario five fix the typos
 def _VALIDATE_INPUT(TEXT_VALUE):
-    VALID_INPUT = True
-    
-    if TEXT_VALUE is None:
-        VALID_INPUT = False
-    
-    if TEXT_VALUE == "":
-        VALID_INPUT = False
-        
-    return VALID_INPUT
+    return TEXT_VALUE not in (None, "")
 
 def PROCESS_USER_DATA(USER_TEXT):
     # Call the helper function to validate input
